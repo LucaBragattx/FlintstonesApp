@@ -1,0 +1,7 @@
+{
+    "/users/*": {
+      "target": "https://devevuseraccessev2.azurewebsites.net",
+      "secure": false,
+      "changeOrigin": true
+    }
+ }

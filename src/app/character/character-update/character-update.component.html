@@ -1,0 +1,51 @@
+<div id="backround_container_update" class="background-container">
+    <div id="center_container_update" class="center-container">
+        <mat-card  id="card_update" class="card-update">
+          <h3 id="heading_update">Please update this character's attributes in the list!</h3>
+          <form id="form_update" [formGroup]="updateForm" class="example-form" (submit)="onFormSubmit($event)">
+            <mat-form-field id="name_form_field_update" class="example-full-width">
+              <mat-label id="name_label_update">Character Name:</mat-label>
+              <input matInput id="name_input_update" formControlName="name" placeholder="Ex. Fred Flintstone" type="text" #nameInput>
+              <mat-error id="name_error_update" *ngIf="updateForm.get('name').invalid">
+                Please enter a valid name!
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field id="description_form_field_update" class="example-full-width">
+                <mat-label id="description_label_update">Character Description:</mat-label>
+                <input matInput id="description_input_update" formControlName="description" type="text" placeholder="Ex. Father of Pebbles" #descriptionInput>
+                <mat-error id="description_error_update" *ngIf="updateForm.get('description').invalid">
+                    Please enter a valid description!
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field id="url_form_field_update" class="example-full-width">
+                <mat-label id="url_label_update">Character Image:</mat-label>
+                <input matInput id="url_input_update" formControlName="imagePath" type="text" placeholder="Ex. URL" #urlInput>
+                <mat-error id="url_error_update" *ngIf="updateForm.get('imagePath').invalid">
+                    Please enter a valid name!
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field id="sex_form_field_update" class="example-full-width">
+                <mat-label id="sex_label_update">Character Sex:</mat-label>
+                <mat-select id="sex_input_update" [(ngModel)]="item.sex"  formControlName="sex" placeholder="Ex. Male" required name="sex">
+                    <mat-option value="Male">Male</mat-option>
+                    <mat-option value="Female">Female</mat-option>
+                </mat-select>
+                <mat-error id="sex_error_update" *ngIf="updateForm.get('sex').invalid">
+                    Please select a valid sex!
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field id="age_form_field_update" class="example-full-width">
+                <mat-label id="age_label_update">Character Age:</mat-label>
+                <input matInput id="age_input_update" formControlName="age" type="text" placeholder="Ex. 20" #ageInput>
+                <mat-error id="age_error_update" *ngIf="updateForm.get('age').invalid">
+                    Please enter a valid age!
+                </mat-error>
+            </mat-form-field> 
+            <button mat-raised-button id="submit_button_update" color="primary" type="submit" [disabled]="updateForm.invalid">Update</button>
+      </form>
+    </mat-card>
+    </div>
+    <div *ngIf="isFetching" class="spinner">
+        <app-spinner></app-spinner>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Character Gender Chart</h1>
+    <fusioncharts *ngIf="!isFetching"
+        [chartConfig]=chartConfig
+        [dataSource]=dataSource>
+</fusioncharts>
+<div *ngIf="isFetching">
+    <app-spinner></app-spinner>
+</div>
+</div>

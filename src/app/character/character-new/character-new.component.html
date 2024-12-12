@@ -1,0 +1,49 @@
+<div id="backround_container_new" class="background-container">
+    <div id="center_container_new" class="center-container">
+        <mat-card id="card_new" class="card-new">
+            <h3 id="heading_new">Please enter a characters attributes to add to the list!</h3>
+            <form id="form_new" class="example-form" (submit)="onFormSubmit($event)">
+                <mat-form-field id="name_form_field_new" class="example-full-width">
+                  <mat-label id="name_label_new">Character Name:</mat-label>
+                  <input matInput id="name_input_new" [formControl]="name" required placeholder="Ex. Fred Flintstone" type="text" #nameInput>
+                  <mat-error id="name_error_new" *ngIf="name.invalid">
+                    Please enter a valid name!
+                </mat-error>
+                </mat-form-field>
+                <mat-form-field id="description_form_field_new" class="example-full-width">
+                    <mat-label id="description_label_new">Character Description:</mat-label>
+                    <input matInput id="description_input_new" [formControl]="desc" required placeholder="Ex. Father of Pebbles" type="text" #descriptionInput>
+                    <mat-error id="description_error_new" *ngIf="desc.invalid">
+                        Please enter a valid description!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field id="url_form_field_new" class="example-full-width">
+                    <mat-label id="url_label_new">Character Image:</mat-label>
+                    <input matInput id="url_input_new" [formControl]="url" placeholder="Ex. URL" required type="text" #urlInput>
+                    <mat-error id="url_error_new" *ngIf="url.invalid">
+                        Please enter a valid url!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Character Sex:</mat-label>
+                    <mat-select [(ngModel)]="selectedValue" [formControl]="sex" required name="food">
+                        <mat-option value="Male">Male</mat-option>
+                        <mat-option value="Female">Female</mat-option>
+                    </mat-select>
+                    <mat-error id="sex_error_new" *ngIf="sex.invalid">
+                        Please enter a valid sex!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field id="age_form_field_new" class="example-full-width">
+                    <mat-label id="age_label_new">Character Age:</mat-label>
+                    <input matInput id="age_input_new" [formControl]="age" placeholder="Ex. 20" required #ageInput>
+                    <mat-error id="age_error_new" *ngIf="age.invalid">
+                        Please enter a valid age!
+                    </mat-error>
+                </mat-form-field> 
+                <button mat-raised-button id="add_button_new" color="primary" type="submit" [disabled]="name.invalid || age.invalid || desc.invalid || sex.invalid || url.invalid">Add to list</button>
+              </form>
+        </mat-card>
+    </div>
+    <app-spinner *ngIf="isFetching" class="spinner"></app-spinner>
+</div>

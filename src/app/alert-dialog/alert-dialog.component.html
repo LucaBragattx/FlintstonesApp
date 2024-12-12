@@ -1,0 +1,7 @@
+<mat-dialog-content>
+    {{message}}
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+<button mat-raised-button color="primary" mat-dialog-close id="dialog_button_cancel" tabindex="-1" (click)="onConfirmClick()">{{cancelButtonText}}</button>
+<button mat-raised-button mat-dialog-close id="dialog_button_no" cdkFocusInitial (click)="onDismiss()">No</button>
+</mat-dialog-actions>

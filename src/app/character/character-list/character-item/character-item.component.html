@@ -1,0 +1,13 @@
+<mat-list-item id="list_item" routerLinkActive="active">
+    <img id="item_image" matListItemAvatar class="imgAvatar" [src]="character.imagePath" alt="{{ character.name }}">
+    <h3 matListItemTitle id="heading_item" class="text-margin">{{ character.name}}</h3>
+    <span class="spacer"></span>
+    <button mat-raised-button id="update_button_item" class="button-margin" color="primary" (click)="directToUpdate()">Update</button>
+    <button mat-raised-button id="details_button_item" class="button-margin" color="accent" (click)="directToDetails()">Details</button>
+    <button mat-mini-fab id="delete_button_item" class="button-margin" color="warn"  (click)="onDelete()">
+        <mat-icon id="delete_icon_item">delete</mat-icon>
+        </button>
+    </mat-list-item>
+<mat-divider id="divider_item"></mat-divider>
+
+

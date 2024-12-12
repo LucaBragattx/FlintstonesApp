@@ -1,0 +1,20 @@
+.header-image{
+    max-width: 70%;
+    max-height: 70%;
+    margin: 8px;
+}
+
+.header{
+    background-color: #adade6;
+}
+
+.btn-nav{
+    font-family: 'Salsa', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+

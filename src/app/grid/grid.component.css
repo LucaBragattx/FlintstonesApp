@@ -1,0 +1,37 @@
+.container{
+    /* margin: auto; */
+    /* padding: auto; */
+}
+
+.ag-theme-alpine{
+    /* --ag-foreground-color: rgb(126, 46, 132); */
+    --ag-background-color: #e6d8ad;
+    --ag-odd-row-background-color: #AEA178;
+    --ag-header-background-color: #d7d7d7;
+    /* --ag-header-foreground-color: rgb(204, 245, 172);
+    --ag-header-column-resize-handle-color: rgb(126, 46, 132); */
+
+    --ag-font-size: 17px;
+    --ag-font-family: monospace;
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjZ4ZGl4eXduOGtzZWk1eHpkemVxbXhiazc2bDZiYXNibGI5bnp2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HQp9pMIlKV6zQiBlBi/giphy.gif);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{  
+    font-family: 'Lemon', serif;
+    font-weight: 400;
+    font-style: normal;
+}

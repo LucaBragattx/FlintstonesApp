@@ -1,0 +1,33 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .center-container {
+    /* display: flex;
+    justify-content: center;
+    margin: 50px auto; */
+  }
+
+  .card-new{
+    background-color: #e6d8ad;
+  }
+
+  .background-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjZ4ZGl4eXduOGtzZWk1eHpkemVxbXhiazc2bDZiYXNibGI5bnp2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/HQp9pMIlKV6zQiBlBi/giphy.gif);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }

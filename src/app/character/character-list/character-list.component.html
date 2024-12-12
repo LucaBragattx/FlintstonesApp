@@ -1,0 +1,21 @@
+<div id="backround_container_list" class="background-container">
+    <div id="container_list" class="container">
+      <div id="list_container_list" class="list-container">
+        <mat-card *ngIf="!isFetching" id="card_list" class="card-list">
+          <h2 id="heading_list" class="center-heading">Character List</h2>
+          <button id="add_button_list" mat-raised-button color="accent" (click)="addNew()">Add new character</button>
+          <mat-card-content id="card_content_list">
+            <mat-list id="list_list">
+              <app-character-item *ngFor="let characterItem of characters; let i = index" 
+                [character]="characterItem" 
+                [id]="i"></app-character-item>
+            </mat-list>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div *ngIf="isFetching">
+      <app-spinner></app-spinner>
+    </div>
+</div>
+  

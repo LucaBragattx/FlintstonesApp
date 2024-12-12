@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~ag-grid-community/dist/styles/ag-grid.css'; 
+@import '~ag-grid-community/dist/styles/ag-theme-alpine.css';
+
+html, body { height: 100%; }
+body { margin: 0px; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: 'Lemon';
+    src: url('./assets/fonts/Lemon-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Salsa", cursive;
+    src: url('./assets/fonts/Salsa-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+

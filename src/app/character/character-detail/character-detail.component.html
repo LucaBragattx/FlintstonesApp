@@ -1,0 +1,21 @@
+<div id="backround_container_detail" class="background-container">
+  <div id="center_container_detail" class="center-container">
+    <mat-card id="card_details" class="card-details">
+      <h1 id="heading_detail" class="center-heading">Character attributes</h1>
+      <mat-card-content id="card_content_details">
+        <div id="image_container_details" class="div-image">
+            <img id="image_details" src="{{ item.imagePath }}" alt="{{ item.name }}">
+        </div>
+          <div id="display_container_detail" class="displayFlex">
+            <mat-label id="name_label_details" style="font-size: large;"><strong>Character name: </strong>{{ item.name }}</mat-label>
+            <mat-label id="description" style="font-size: large;"><strong>Character description: </strong>{{ item.description }}</mat-label>
+            <mat-label id="sex_label_details" style="font-size: large;"><strong>Character sex: </strong>{{ item.sex }}</mat-label>
+            <mat-label id="name_label_details" style="font-size: large;"><strong>Character age: </strong> {{ item.age }}</mat-label>
+          </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+    <app-spinner *ngIf="isFetching" class="spinner">
+    </app-spinner>
+</div>
+    
